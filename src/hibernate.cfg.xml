@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+        <property name='connection.pool_size'>
+            1
+        </property>
+        <property name="connection.username">
+            thesis
+        </property>
+        <property name="connection.password">
+            thesis
+        </property>
+        <property name="hibernate.hbm2ddl.auto">
+            create
+        </property>
+        <property name="hibernate.show_sql">
+            false
+        </property>
+        <!--<property name="hibernate.enable_lazy_load_no_trans">true</property>-->
+
+        <mapping class="it.unisannio.loganalysis.extractor.model.model.Action"/>
+        <mapping class="it.unisannio.loganalysis.extractor.model.model.Resource"/>
+        <mapping class="it.unisannio.loganalysis.extractor.model.model.User"/>
+        <mapping class="it.unisannio.loganalysis.extractor.model.model.ActionProperty"/>
+        <mapping class="it.unisannio.loganalysis.extractor.model.model.ResourceProperty"/>
+        <mapping class="it.unisannio.loganalysis.extractor.model.model.UserProperty"/>
+
+    </session-factory>
+</hibernate-configuration>
